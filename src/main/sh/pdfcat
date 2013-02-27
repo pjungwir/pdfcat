@@ -1,0 +1,3 @@
+#!/bin/sh
+
+java -classpath $HOME/local/java/iText-2.0.7.jar:$HOME/local/java/pdfcat.jar com.illuminated.pdfcat.PdfCat $*

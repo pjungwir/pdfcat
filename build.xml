@@ -1,0 +1,26 @@
+<project name="pdfcat" default="build">
+
+	<path id="classpath.compile">
+		<pathelement location="build"/>
+		<pathelement location="/Users/paul/local/java/iText-2.0.7.jar"/>
+	</path>
+
+	<target name="build" depends="compile,jar">
+	</target>
+
+	<target name="compile">
+		<mkdir dir="build/class"/>
+		<javac destdir="build/class" srcdir="src/main/java" classpathref="classpath.compile">
+		</javac>
+	</target>
+
+	<target name="jar">
+		<jar basedir="build/class" destfile="build/pdfcat.jar">
+		</jar>
+	</target>
+
+	<target name="clean">
+		<delete dir="build"/>
+	</target>
+
+</project>
